@@ -1,0 +1,45 @@
+/* Hobby Item Styles */
+.hobby-item {
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.hobby-item:hover {
+    transform: translateY(-5px);
+}
+
+.hobby-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+}
+
+.hover-overlay span {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.hobby-link:hover .hover-overlay {
+    opacity: 1;
+} 
