@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /sitemap.xml
+Allow: /assets/
+Allow: /js/
+Allow: /styles/
+Allow: /#experience
+Allow: /#projects
+Allow: /#contact
+
+Sitemap: https://mohsinalidharkhad.github.io/sitemap.xml 

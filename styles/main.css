@@ -916,24 +916,26 @@ body {
 }
 
 .hobby-item {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 2rem;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all var(--transition-speed);
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 15px !important;
+    padding: 2rem !important;
+    text-align: center !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    transition: all var(--transition-speed) !important;
+    cursor: pointer !important;
+    position: relative !important;
+    overflow: hidden !important;
 }
 
 .hobby-item:hover {
-    transform: translateY(-5px);
-    border-color: transparent;
+    transform: translateY(-5px) !important;
+    border-color: transparent !important;
+    background: rgba(45, 38, 64, 0.75) !important;
     box-shadow: 0 8px 32px rgba(var(--primary-color-rgb), 0.25),
                 0 16px 48px rgba(var(--primary-color-rgb), 0.1),
-                0 0 0 1px rgba(var(--primary-color-rgb), 0.05);
+                0 0 0 1px rgba(var(--primary-color-rgb), 0.05) !important;
 }
 
 .hobby-content {
@@ -2031,46 +2033,63 @@ footer {
 /* Values Section Styles */
 .values-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    padding: 0;
-    max-width: 1000px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .value-item {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    padding: 1rem;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    cursor: pointer;
-}
-
-.value-item:hover {
     background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
-    border-color: var(--primary-color);
+    border-radius: 15px;
+    padding: 1.5rem 2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all var(--transition-speed);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    min-width: 300px;
 }
 
 .value-header {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    justify-content: flex-start;
+    gap: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .value-icon {
-    font-size: 1.5rem;
-    min-width: 1.5rem;
+    font-size: 1.25rem;
+    min-width: 1.25rem;
     text-align: center;
+    flex-shrink: 0;
 }
 
 .value-item h3 {
     color: var(--text-color);
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin: 0;
     font-weight: 500;
     font-family: 'Raleway', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    border-color: transparent;
+    background: rgba(45, 38, 64, 0.75);
+    box-shadow: 0 8px 32px rgba(var(--primary-color-rgb), 0.25),
+                0 16px 48px rgba(var(--primary-color-rgb), 0.1),
+                0 0 0 1px rgba(var(--primary-color-rgb), 0.05);
 }
 
 .value-details {
@@ -2078,6 +2097,7 @@ footer {
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     opacity: 0;
+    text-align: left;
 }
 
 .value-item:hover .value-details {
@@ -2094,6 +2114,7 @@ footer {
     line-height: 1.4;
     margin: 0;
     opacity: 0.8;
+    text-align: left;
 }
 
 /* Responsive adjustments */
@@ -2389,14 +2410,21 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(255, 255, 255, 0.1);
     padding: 1rem;
     transform: translateY(100%);
     transition: transform 0.3s ease;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .gallery-item:hover .photo-info {
     transform: translateY(0);
+    border-color: transparent;
+    box-shadow: 0 8px 32px rgba(var(--primary-color-rgb), 0.25),
+                0 16px 48px rgba(var(--primary-color-rgb), 0.1),
+                0 0 0 1px rgba(var(--primary-color-rgb), 0.05);
 }
 
 .photo-info h3 {
