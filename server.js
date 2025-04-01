@@ -3,15 +3,15 @@ const path = require('path');
 const fs = require('fs');
 const app = express();
 
-// Serve static files from the src directory
-app.use(express.static(path.join(__dirname, 'src')));
+// Serve static files from the root directory
+app.use(express.static(__dirname));
 
 // Enable directory listing for debugging
-app.use('/assets', express.static(path.join(__dirname, 'src', 'assets')));
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 // Endpoint to get list of photos
 app.get('/api/photos', (req, res) => {
-    const photosDir = path.join(__dirname, 'src', 'assets', 'images', 'photography');
+    const photosDir = path.join(__dirname, 'assets', 'images', 'photography');
     console.log('Attempting to read photos from directory:', photosDir);
     
     // Check if directory exists
@@ -46,11 +46,11 @@ app.get('/api/photos', (req, res) => {
 
 // Handle all other routes by serving index.html
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'src', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
-    console.log(`Static files are being served from: ${path.join(__dirname, 'src')}`);
+    console.log(`Static files are being served from: ${__dirname}`);
 }); 

@@ -273,18 +273,63 @@
             }
 
             /* Enhance tile visibility */
-            .gallery-item, .book-tile, .sport-tile {
+            .gallery-item, .book-tile, .sport-tile, .value-item {
                 background: rgba(255, 255, 255, 0.1) !important;
-                backdrop-filter: blur(5px) !important;
-                -webkit-backdrop-filter: blur(5px) !important;
-                border-radius: 12px !important;
+                backdrop-filter: blur(10px) !important;
+                -webkit-backdrop-filter: blur(10px) !important;
+                border-radius: 15px !important;
+                padding: 1.5rem 2rem !important;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
                 transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+                border: 1px solid rgba(255, 255, 255, 0.1) !important;
+                min-width: 300px !important;
             }
 
-            .gallery-item:hover, .book-tile:hover, .sport-tile:hover {
+            .gallery-item:hover, .book-tile:hover, .sport-tile:hover, .value-item:hover {
                 transform: translateY(-5px) !important;
-                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+                background: rgba(45, 38, 64, 0.75) !important;
+                box-shadow: 0 8px 32px rgba(var(--primary-color-rgb), 0.25),
+                            0 16px 48px rgba(var(--primary-color-rgb), 0.1),
+                            0 0 0 1px rgba(var(--primary-color-rgb), 0.05) !important;
+                border-color: transparent !important;
+            }
+
+            .value-item .value-header {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: flex-start !important;
+                gap: 1rem !important;
+                white-space: nowrap !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
+            }
+
+            .value-item .value-icon {
+                font-size: 1.25rem !important;
+                min-width: 1.25rem !important;
+                text-align: center !important;
+                flex-shrink: 0 !important;
+            }
+
+            .value-item h3 {
+                color: var(--text-color) !important;
+                font-size: 0.95rem !important;
+                margin: 0 !important;
+                font-weight: 500 !important;
+                font-family: 'Raleway', sans-serif !important;
+                white-space: nowrap !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
+                text-align: left !important;
+            }
+
+            .values-grid {
+                display: grid !important;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+                gap: 1.5rem !important;
+                max-width: 1200px !important;
+                margin: 0 auto !important;
+                padding: 0 1rem !important;
             }
 
             /* Enhance overlay titles */
@@ -542,9 +587,9 @@
                     </div>
                     <div class="form-container">
                         <form id="contact-form" class="contact-form">
-                            <input type="text" name="name" id="name" placeholder="Name" required>
-                            <input type="email" name="email" id="email" placeholder="Email">
-                            <input type="tel" name="phone" id="phone" placeholder="Phone Number">
+                            <input type="text" name="name" id="name" placeholder="Name (optional)">
+                            <input type="email" name="email" id="email" placeholder="Email (optional)">
+                            <input type="tel" name="phone" id="phone" placeholder="Phone Number (optional)">
                             <textarea name="message" id="message" placeholder="Message" rows="5" required></textarea>
                             <button type="submit" class="submit-button">Send Me a Message</button>
                         </form>

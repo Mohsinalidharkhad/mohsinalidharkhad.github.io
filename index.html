@@ -1,9 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PET0YDW0MK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-PET0YDW0MK');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohsin | AI Product Leader</title>
+    <title>Mohsin Ali | AI Product Manager & Leader | Conversational AI Expert</title>
+    
+    <!-- Favicon Tags -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileImage" content="assets/favicon/mstile-144x144.png">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Mohsin Ali is an experienced AI Product Manager and Leader specializing in conversational AI, voice bots, and AI platforms. View portfolio of successful AI products and projects.">
+    <meta name="keywords" content="Mohsin Ali, AI Product Manager, AI Product Leader, Conversational AI, Voice Bots, AI Platform, AIProduct Management">
+    <meta name="author" content="Mohsin Ali">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Mohsin Ali | AI Product Manager & Leader">
+    <meta property="og:description" content="Experienced AI Product Manager specializing in conversational AI, voice bots, and AI platforms. View portfolio of successful AI products and projects.">
+    <meta property="og:image" content="assets/images/Headshot/headshot.jpg">
+    <meta property="og:url" content="https://mohsinalidharkhad.github.io">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mohsin Ali | AI Product Manager & Leader">
+    <meta name="twitter:description" content="Experienced AI Product Manager specializing in conversational AI, voice bots, and AI platforms.">
+    <meta name="twitter:image" content="assets/images/Headshot/headshot.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mohsinalidharkhad.github.io">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +65,11 @@
     
     <nav class="nav-container">
         <div class="nav-content">
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#values">Values</a></li>
@@ -155,7 +202,7 @@
             </div>
         </section>
 
-        <section id="experience" class="section">
+        <section id="experience" class="section" aria-label="Professional Experience">
             <div class="content-wrapper">
                 <h2 class="section-title" data-text="Experience">Experience</h2>
                 <div class="timeline">
@@ -164,7 +211,7 @@
             </div>
         </section>
 
-        <section id="projects" class="section">
+        <section id="projects" class="section" aria-label="AI Product Portfolio">
             <div class="content-wrapper">
                 <h2 class="section-title" data-text="Projects">Projects</h2>
                 <div class="portfolio-grid">
@@ -542,11 +589,11 @@
                     </div>
                     <div class="form-container">
                         <form id="contact-form" class="contact-form">
-                            <input type="text" name="name" id="name" placeholder="Name" required>
-                            <input type="email" name="email" id="email" placeholder="Email">
-                            <input type="tel" name="phone" id="phone" placeholder="Phone Number">
-                            <textarea name="message" id="message" placeholder="Message" rows="5" required></textarea>
-                            <button type="submit" class="submit-button">Send Me a Message</button>
+                            <input type="text" name="name" id="name" placeholder="Name (optional)">
+                            <input type="email" name="email" id="email" placeholder="Email (optional)">
+                            <input type="tel" name="phone" id="phone" placeholder="Phone Number (optional)">
+                            <textarea name="message" id="message" placeholder="Message or Feedback" rows="5" required></textarea>
+                            <button type="submit" class="submit-button">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -572,5 +619,31 @@
     <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
     <script src="js/contact.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html> 
