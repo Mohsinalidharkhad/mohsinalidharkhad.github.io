@@ -32,6 +32,9 @@
     
     <nav class="nav-container">
         <div class="nav-content">
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#values">Values</a></li>
@@ -45,6 +48,20 @@
             </div>
         </div>
     </nav>
+
+    <div class="mobile-nav">
+        <button class="mobile-nav-close" onclick="toggleMobileMenu()">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="#home" onclick="toggleMobileMenu()">Home</a></li>
+            <li><a href="#values" onclick="toggleMobileMenu()">Values</a></li>
+            <li><a href="#experience" onclick="toggleMobileMenu()">Experience</a></li>
+            <li><a href="#projects" onclick="toggleMobileMenu()">Projects</a></li>
+            <li><a href="#hobbies" onclick="toggleMobileMenu()">Hobbies</a></li>
+            <li><a href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
+        </ul>
+    </div>
 
     <main>
         <section id="home" class="section">
@@ -81,8 +98,11 @@
                 <div class="values-grid">
                     <div class="value-item">
                         <div class="value-header">
-                            <span class="value-icon">🎯</span>
-                            <h3>Bold but Practical</h3>
+                            <div class="value-header-left">
+                                <span class="value-icon">🎯</span>
+                                <h3>Bold but Practical</h3>
+                            </div>
+                            <i class="fas fa-chevron-down expand-indicator"></i>
                         </div>
                         <div class="value-details">
                             <p>Take ambitious, innovative steps while staying grounded in feasible solutions.</p>
@@ -90,8 +110,11 @@
                     </div>
                     <div class="value-item">
                         <div class="value-header">
-                            <span class="value-icon">🤝</span>
-                            <h3>Disagree and Commit</h3>
+                            <div class="value-header-left">
+                                <span class="value-icon">🤝</span>
+                                <h3>Disagree and Commit</h3>
+                            </div>
+                            <i class="fas fa-chevron-down expand-indicator"></i>
                         </div>
                         <div class="value-details">
                             <p>Respectfully share differing views, then unite in full support once a decision is made.</p>
@@ -99,8 +122,11 @@
                     </div>
                     <div class="value-item">
                         <div class="value-header">
-                            <span class="value-icon">⚡</span>
-                            <h3>Bias for Action</h3>
+                            <div class="value-header-left">
+                                <span class="value-icon">⚡</span>
+                                <h3>Bias for Action</h3>
+                            </div>
+                            <i class="fas fa-chevron-down expand-indicator"></i>
                         </div>
                         <div class="value-details">
                             <p>Prioritize swift decision-making and execution over prolonged deliberation.</p>
@@ -108,8 +134,11 @@
                     </div>
                     <div class="value-item">
                         <div class="value-header">
-                            <span class="value-icon">🔄</span>
-                            <h3>Iterations Over Perfection</h3>
+                            <div class="value-header-left">
+                                <span class="value-icon">🔄</span>
+                                <h3>Iterations Over Perfection</h3>
+                            </div>
+                            <i class="fas fa-chevron-down expand-indicator"></i>
                         </div>
                         <div class="value-details">
                             <p>Embrace incremental improvements and learn quickly rather than waiting for flawless outcomes.</p>
@@ -117,8 +146,11 @@
                     </div>
                     <div class="value-item">
                         <div class="value-header">
-                            <span class="value-icon">⚖️</span>
-                            <h3>Every Yes is a No to Something</h3>
+                            <div class="value-header-left">
+                                <span class="value-icon">⚖️</span>
+                                <h3>Every Yes is a No to Something</h3>
+                            </div>
+                            <i class="fas fa-chevron-down expand-indicator"></i>
                         </div>
                         <div class="value-details">
                             <p>Every Yes is a No to Something Else: Recognize that each commitment requires trade-offs, so I choose carefully where I invest time and resources.</p>
@@ -126,17 +158,23 @@
                     </div>
                     <div class="value-item">
                         <div class="value-header">
-                            <span class="value-icon">📈</span>
-                            <h3>Fail Fast, Learn Faster</h3>
+                            <div class="value-header-left">
+                                <span class="value-icon">🛠️</span>
+                                <h3>Get in the Trenches and Learn</h3>
+                            </div>
+                            <i class="fas fa-chevron-down expand-indicator"></i>
                         </div>
                         <div class="value-details">
-                            <p>Encourage rapid experimentation. View mistakes as opportunities for learning and quick pivots.</p>
+                            <p>Embrace hands-on experience and learn everyday by doing things first-hand.</p>
                         </div>
                     </div>
                     <div class="value-item">
                         <div class="value-header">
-                            <span class="value-icon">📊</span>
-                            <h3>Data-Driven & Customer-Centric</h3>
+                            <div class="value-header-left">
+                                <span class="value-icon">📊</span>
+                                <h3>Data-Driven & Customer-Centric</h3>
+                            </div>
+                            <i class="fas fa-chevron-down expand-indicator"></i>
                         </div>
                         <div class="value-details">
                             <p>Data-Driven Decisions, Customer-Centric Solutions: Use evidence-based insights while centering decisions on customer needs.</p>
@@ -144,8 +182,11 @@
                     </div>
                     <div class="value-item">
                         <div class="value-header">
-                            <span class="value-icon">🎯</span>
-                            <h3>Build for Future, Solve for Today</h3>
+                            <div class="value-header-left">
+                                <span class="value-icon">🏗️</span>
+                                <h3>Build for Future, Solve for Today</h3>
+                            </div>
+                            <i class="fas fa-chevron-down expand-indicator"></i>
                         </div>
                         <div class="value-details">
                             <p>Plan ahead without losing sight of immediate challenges. Balance sustainable growth with current needs.</p>
@@ -153,8 +194,11 @@
                     </div>
                     <div class="value-item">
                         <div class="value-header">
-                            <span class="value-icon">🎯</span>
-                            <h3>Focus on Outcomes</h3>
+                            <div class="value-header-left">
+                                <span class="value-icon">🎯</span>
+                                <h3>Focus on Outcomes</h3>
+                            </div>
+                            <i class="fas fa-chevron-down expand-indicator"></i>
                         </div>
                         <div class="value-details">
                             <p>Own the Problem, Not the Solution / Focus on Outcomes, Not Features: Shift focus from solutions to problems. Measure success by real-world impact rather than features.</p>
@@ -282,24 +326,35 @@
             }
 
             /* Enhance tile visibility */
-            .gallery-item, .book-tile, .sport-tile, .value-item {
+            .book-tile {
                 background: rgba(255, 255, 255, 0.1) !important;
                 backdrop-filter: blur(10px) !important;
                 -webkit-backdrop-filter: blur(10px) !important;
-                border-radius: 15px !important;
-                padding: 1.5rem 2rem !important;
+                border-radius: 12px !important;
+                padding: 0 !important;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
                 transition: transform 0.3s ease, box-shadow 0.3s ease !important;
                 border: 1px solid rgba(255, 255, 255, 0.1) !important;
-                min-width: 300px !important;
+                width: 250px !important; /* Increased width from 200px to 250px */
+                aspect-ratio: 3/4 !important;
+                overflow: hidden !important;
+                position: relative !important;
+                margin: 0 auto !important;
             }
 
-            .gallery-item:hover, .book-tile:hover, .sport-tile:hover, .value-item:hover {
+            .book-tile:hover {
                 transform: translateY(-5px) !important;
                 background: rgba(45, 38, 64, 0.75) !important;
                 box-shadow: 0 8px 32px rgba(var(--primary-color-rgb), 0.25),
                             0 16px 48px rgba(var(--primary-color-rgb), 0.1),
                             0 0 0 1px rgba(var(--primary-color-rgb), 0.05) !important;
+                border-color: transparent !important;
+            }
+
+            .gallery-item:hover {
+                transform: scale(1.02) !important;
+                background: rgba(45, 38, 64, 0.75) !important;
+                box-shadow: 0 8px 32px rgba(var(--primary-color-rgb), 0.25) !important;
                 border-color: transparent !important;
             }
 
@@ -350,33 +405,18 @@
             /* Fix for Travel Gallery Text Display */
             #travel-overlay .gallery-item::after,
             .gallery-overlay #travel-overlay .gallery-item::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 35% !important;
-                background: linear-gradient(
-                    to top,
-                    rgba(0, 0, 0, 0.95) 0%,
-                    rgba(0, 0, 0, 0.8) 20%,
-                    rgba(0, 0, 0, 0.6) 40%,
-                    rgba(0, 0, 0, 0.4) 60%,
-                    rgba(0, 0, 0, 0.2) 80%,
-                    rgba(0, 0, 0, 0) 100%
-                ) !important;
-                z-index: 1;
+                display: none;
             }
 
             #travel-overlay .photo-info,
             .gallery-overlay #travel-overlay .photo-info {
                 position: absolute;
-                bottom: 35px !important;
+                bottom: 40px !important;
                 left: 20px;
                 right: 20px;
                 color: white;
                 z-index: 10 !important;
-                background: none;
+                background: none !important;
                 padding: 0 !important;
                 max-height: none !important;
                 text-align: left !important;
@@ -418,6 +458,63 @@
                 position: fixed !important;
                 right: 20px !important;
                 top: 20px !important;
+            }
+
+            /* Books Grid Specific Styles */
+            .books-grid {
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr) !important; /* Changed to 3 columns by default */
+                gap: 50px !important; /* Increased gap to match photography tiles */
+                padding: 50px !important; /* Increased padding to match gap */
+                width: 100% !important;
+                margin: 0 auto !important;
+                justify-items: center !important;
+            }
+
+            .book-tile .book-cover {
+                width: 100% !important;
+                height: 100% !important;
+                position: relative !important;
+            }
+
+            .book-tile .book-cover img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                display: block !important;
+            }
+
+            @media (max-width: 1200px) {
+                .books-grid {
+                    grid-template-columns: repeat(2, 1fr) !important;
+                    gap: 40px !important;
+                }
+                
+                .book-tile {
+                    width: 220px !important;
+                }
+            }
+
+            @media (max-width: 900px) {
+                .books-grid {
+                    grid-template-columns: repeat(2, 1fr) !important;
+                    gap: 35px !important;
+                }
+                
+                .book-tile {
+                    width: 200px !important;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .books-grid {
+                    grid-template-columns: repeat(1, 1fr) !important;
+                    gap: 30px !important;
+                }
+                
+                .book-tile {
+                    width: 180px !important;
+                }
             }
         </style>
 
@@ -599,7 +696,7 @@
                             <input type="text" name="name" id="name" placeholder="Name (optional)">
                             <input type="email" name="email" id="email" placeholder="Email (optional)">
                             <input type="tel" name="phone" id="phone" placeholder="Phone Number (optional)">
-                            <textarea name="message" id="message" placeholder="Message" rows="5" required></textarea>
+                            <textarea name="message" id="message" placeholder="Message or Feedback" rows="5" required></textarea>
                             <button type="submit" class="submit-button">Send Me a Message</button>
                         </form>
                     </div>
@@ -626,5 +723,47 @@
     <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
     <script src="js/contact.js"></script>
+    <script src="scripts/values.js"></script>
+    <script>
+    function toggleMobileMenu() {
+        const mobileNav = document.querySelector('.mobile-nav');
+        mobileNav.classList.toggle('active');
+        document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const mobileNav = document.querySelector('.mobile-nav');
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        if (mobileNav.classList.contains('active') && 
+            !mobileNav.contains(e.target) && 
+            !mobileMenuBtn.contains(e.target)) {
+            toggleMobileMenu();
+        }
+    });
+
+    // Update active nav link on scroll
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav-links a');
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            const scrollPosition = window.scrollY;
+            
+            if (scrollPosition >= sectionTop - 100 && 
+                scrollPosition < sectionTop + sectionHeight - 100) {
+                const sectionId = section.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    });
+    </script>
 </body>
 </html> 

@@ -866,18 +866,35 @@ const initGalleryOverlay = () => {
     // Function to create travel gallery items
     const createTravelItems = () => {
         travelContainer.innerHTML = '';
+        const fragment = document.createDocumentFragment();
+        
         travelDestinations.forEach(destination => {
             const travelItem = document.createElement('div');
             travelItem.className = 'gallery-item';
-            travelItem.innerHTML = `
-                <img src="${destination.imageUrl}" alt="${destination.city}, ${destination.country}">
-                <div class="photo-info">
-                    <h3>${destination.city}</h3>
-                    <p>${destination.country}</p>
-                </div>
-            `;
-            travelContainer.appendChild(travelItem);
+            
+            const img = document.createElement('img');
+            img.src = destination.imageUrl;
+            img.alt = `${destination.city}, ${destination.country}`;
+            img.loading = 'lazy';
+            
+            const photoInfo = document.createElement('div');
+            photoInfo.className = 'photo-info';
+            
+            const h3 = document.createElement('h3');
+            h3.textContent = destination.city;
+            
+            const p = document.createElement('p');
+            p.textContent = destination.country;
+            
+            photoInfo.appendChild(h3);
+            photoInfo.appendChild(p);
+            travelItem.appendChild(img);
+            travelItem.appendChild(photoInfo);
+            
+            fragment.appendChild(travelItem);
         });
+        
+        travelContainer.appendChild(fragment);
     };
 
     // Function to create sports gallery items

@@ -245,20 +245,10 @@ const createScrollAnimations = () => {
                     
                     anime({
                         targets: '.timeline-item',
-                        opacity: [0, 1],
                         translateY: [50, 0],
                         delay: anime.stagger(200),
                         duration: 800,
                         easing: 'easeOutExpo'
-                    });
-                    
-                    anime({
-                        targets: '.timeline-content::before',
-                        scale: [0, 1],
-                        opacity: [0, 1],
-                        delay: anime.stagger(200, {start: 500}),
-                        duration: 600,
-                        easing: 'easeOutBack'
                     });
                 }
                 
