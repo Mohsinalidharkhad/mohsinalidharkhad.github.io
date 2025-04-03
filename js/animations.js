@@ -46,10 +46,10 @@ const createBackgroundAnimation = () => {
         resizeCanvas();
         
         const particles = [];
-        const particleCount = 200;
-        const particleBaseSize = 2;
-        const connectionDistance = 150;
-        const mouseForce = 0.005; // Reduced from 0.01 to 0.005 for even slower movement
+        const particleCount = 150;
+        const particleBaseSize = 1.5;
+        const connectionDistance = 120;
+        const mouseForce = 0.003; // Reduced from 0.01 to 0.005 for even slower movement
         
         // Create particles with velocity
         for (let i = 0; i < particleCount; i++) {
@@ -139,7 +139,7 @@ const createBackgroundAnimation = () => {
                         const distance = Math.sqrt(dx * dx + dy * dy);
                         
                         if (distance < connectionDistance) {
-                            const opacity = (1 - distance / connectionDistance) * 0.3; // Reduced connection opacity
+                            const opacity = (1 - distance / connectionDistance) * 0.2; // Reduced connection opacity
                             const gradient = ctx.createLinearGradient(
                                 particle.x, particle.y,
                                 otherParticle.x, otherParticle.y
@@ -148,7 +148,7 @@ const createBackgroundAnimation = () => {
                             gradient.addColorStop(1, `rgba(0, 201, 167, ${opacity})`);
                             ctx.beginPath();
                             ctx.strokeStyle = gradient;
-                            ctx.lineWidth = 1 * (1 - distance / connectionDistance);
+                            ctx.lineWidth = 1.5;
                             ctx.moveTo(particle.x, particle.y);
                             ctx.lineTo(otherParticle.x, otherParticle.y);
                             ctx.stroke();
