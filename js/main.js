@@ -1,7 +1,7 @@
 // Portfolio Items
 const portfolioItems = [
     {
-        "title": "Restaurant AI Agent",
+        "title": "Restaurant AI Agent (Personal Project)",
         "description": "An AI-powered dining assistant that provides personalized restaurant recommendations, answers food-related queries, and enhances the dining experience through intelligent conversation.",
         "image": "https://picsum.photos/400/300?random=11",
         "tags": [
