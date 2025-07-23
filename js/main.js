@@ -200,12 +200,12 @@ const portfolioItems = [
 // Experience Timeline
 const experienceItems = [
     {
-        date: 'Sep 2024 - Present',
+        date: 'Sep 2024 - Apr 2025',
         title: 'Lead Product Manager',
         subtitle: 'AI Platform and Analytics',
         company: 'Interface.ai',
         logo: './assets/images/companies/interface-ai-logo.png',
-        description: 'Leading scalable AI self-serve platform development with voicebots and agentic RAG chatbots. Driving analytics initiatives and partnering with stakeholders to maximize client ROI through proactive support.',
+        description: 'Led scalable AI self-serve platform development with voicebots and agentic RAG chatbots. Driving analytics initiatives and partnering with stakeholders to maximize client ROI through proactive support.',
         tech: ['AI Platform', 'Analytics', 'Product Strategy', 'Conversational AI', 'SaaS']
     },
     {
@@ -232,7 +232,7 @@ const experienceItems = [
         subtitle: 'Strategy and Finance',
         company: 'IIM Calcutta',
         logo: './assets/images/companies/iim-c-logo.png',
-        description: 'Completed full-time on-campus MBA from premier management institution. Active member of photography club, volleyball team, and participated in various case competitions.',
+        description: 'Completed One-year full-time PGDM (MBA) from premier management institution. Active member of photography club, volleyball team, and participated in various case competitions.',
         tech: ['Management', 'Strategy', 'Finance']
     },
     {
