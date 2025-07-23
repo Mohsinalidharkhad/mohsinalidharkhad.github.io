@@ -6,8 +6,8 @@ const portfolioItems = [
         "image": "https://picsum.photos/400/300?random=11",
         "tags": [
             "Conversational AI",
-            "Streamlit",
-            "Restaurant Tech"
+            "Agentic Graph RAG",
+            "LLM-as-judge Eval"
         ],
         "isSpecialProject": true,
         "chatUrl": "https://restaurantai-84r9ewew2yfesnbtdfhvxy.streamlit.app/",
