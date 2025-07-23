@@ -25,7 +25,7 @@ const portfolioItems = [
     {
         "title": "Self-serve AI Products",
         "description": "A scalable, self-serve AI voice bot platform built after in-depth client and prospect interviews, enabling rapid deployment and efficient resource utilization.",
-        "image": "https://picsum.photos/400/300?random=2",
+        "image": "./assets/images/platform-ai.jpg",
         "tags": [
             "Voicebots",
             "Scalability",
@@ -44,7 +44,7 @@ const portfolioItems = [
     {
         "title": "LLM-based Conversational  AI Platform",
         "description": "Revolutionized our conversational AI by replacing rigid, NLP-based systems with an end-to-end LLM-driven voice bot, resulting in fluid interactions, enhanced customer satisfaction, and lower resource requirements.",
-        "image": "https://picsum.photos/400/300?random=7",
+        "image": "./assets/images/llm-ai.jpg",
         "tags": [
             "Agentic Voice AI",
             "RAG",
