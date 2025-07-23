@@ -1,6 +1,28 @@
 // Portfolio Items
 const portfolioItems = [
     {
+        "title": "Restaurant AI Agent",
+        "description": "An AI-powered dining assistant that provides personalized restaurant recommendations, answers food-related queries, and enhances the dining experience through intelligent conversation.",
+        "image": "https://picsum.photos/400/300?random=11",
+        "tags": [
+            "Conversational AI",
+            "Streamlit",
+            "Restaurant Tech"
+        ],
+        "isSpecialProject": true,
+        "chatUrl": "https://restaurantai-84r9ewew2yfesnbtdfhvxy.streamlit.app/",
+        "docsUrl": "https://www.notion.so/Restaurant-AI-Agent-AI-Powered-Dining-Assistant-239a4cca7b6f80dda724fa8bcd01e410?source=copy_link",
+        "details": {
+            "overview": "A sophisticated AI dining assistant built on Streamlit that leverages conversational AI to provide personalized restaurant recommendations and enhance the overall dining experience.",
+            "problemStatement": "Finding the right restaurant or getting food-related information can be overwhelming with countless options available. Users need a personalized, intelligent assistant that understands their preferences and provides relevant dining recommendations.",
+            "persona": "Primary users include:\n• Food enthusiasts seeking personalized dining experiences\n• Busy professionals looking for quick restaurant recommendations\n• Tourists exploring local dining options\n• Anyone seeking intelligent food-related assistance",
+            "solution": "Developed an AI-powered conversational agent that uses natural language processing to understand user preferences and provide tailored restaurant recommendations. The system engages users in meaningful conversations about food preferences, dietary restrictions, and dining occasions to deliver personalized suggestions.",
+            "challenges": "• Creating natural, engaging conversations about food preferences\n• Integrating comprehensive restaurant data and recommendations\n• Ensuring the AI understands diverse dining preferences and dietary needs\n• Building an intuitive interface that encourages user engagement",
+            "impact": "• Provides personalized dining experiences through intelligent recommendations\n• Streamlines the restaurant discovery process for users\n• Demonstrates practical applications of conversational AI in the hospitality sector\n• Creates an engaging, user-friendly interface for food-related queries",
+            "learnings": "• The importance of conversational design in creating engaging AI experiences\n• How personalization enhances user satisfaction in recommendation systems\n• The value of intuitive interfaces in making AI technology accessible\n• Best practices for deploying AI applications on cloud platforms like Streamlit"
+        }
+    },
+    {
         "title": "Self-serve AI Products",
         "description": "A scalable, self-serve AI voice bot platform built after in-depth client and prospect interviews, enabling rapid deployment and efficient resource utilization.",
         "image": "https://picsum.photos/400/300?random=2",
@@ -586,6 +608,18 @@ const populatePortfolio = () => {
             const portfolioItem = document.createElement('div');
             portfolioItem.className = 'portfolio-item';
             
+            // Check if this is a special project with CTA buttons
+            const ctaButtons = item.isSpecialProject ? `
+                <div class="cta-buttons">
+                    <a href="${item.chatUrl}" target="_blank" class="cta-btn chat-btn">
+                        <i class="fas fa-comments"></i> Chat
+                    </a>
+                    <a href="${item.docsUrl}" target="_blank" class="cta-btn docs-btn">
+                        <i class="fas fa-book"></i> Docs
+                    </a>
+                </div>
+            ` : '';
+
             portfolioItem.innerHTML = `
                 <div class="portfolio-content">
                     <img src="${item.image}" alt="${item.title}">
@@ -595,13 +629,17 @@ const populatePortfolio = () => {
                         <div class="tags">
                             ${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                         </div>
+                        ${ctaButtons}
                     </div>
                 </div>
             `;
             
-            // Add click handler for modal
-            portfolioItem.addEventListener('click', () => {
-                openPortfolioModal(item);
+            // Add click handler for modal, but prevent CTA button clicks from triggering it
+            portfolioItem.addEventListener('click', (e) => {
+                // Don't open modal if clicking on CTA buttons
+                if (!e.target.closest('.cta-btn')) {
+                    openPortfolioModal(item);
+                }
             });
             
             portfolioGrid.appendChild(portfolioItem);
@@ -628,6 +666,18 @@ function populatePortfolioGridOverlay() {
     portfolioItems.forEach(item => {
         const portfolioItem = document.createElement('div');
         portfolioItem.className = 'portfolio-item';
+        // Check if this is a special project with CTA buttons
+        const ctaButtons = item.isSpecialProject ? `
+            <div class="cta-buttons">
+                <a href="${item.chatUrl}" target="_blank" class="cta-btn chat-btn">
+                    <i class="fas fa-comments"></i> Chat
+                </a>
+                <a href="${item.docsUrl}" target="_blank" class="cta-btn docs-btn">
+                    <i class="fas fa-book"></i> Docs
+                </a>
+            </div>
+        ` : '';
+
         portfolioItem.innerHTML = `
             <div class="portfolio-content">
                 <img src="${item.image}" alt="${item.title}">
@@ -637,13 +687,17 @@ function populatePortfolioGridOverlay() {
                     <div class="tags">
                         ${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                     </div>
+                    ${ctaButtons}
                 </div>
             </div>
         `;
 
-        // Add click handler for modal
-        portfolioItem.addEventListener('click', () => {
-            openPortfolioModal(item);
+        // Add click handler for modal, but prevent CTA button clicks from triggering it
+        portfolioItem.addEventListener('click', (e) => {
+            // Don't open modal if clicking on CTA buttons
+            if (!e.target.closest('.cta-btn')) {
+                openPortfolioModal(item);
+            }
         });
 
         portfolioGridOverlay.appendChild(portfolioItem);

@@ -563,6 +563,84 @@ body {
     color: var(--accent-color);
 }
 
+/* CTA Buttons for Special Projects */
+.cta-buttons {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.chat-btn {
+    background: rgba(var(--primary-color-rgb), 0.1);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.chat-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--primary-color-rgb), 0.3);
+}
+
+.docs-btn {
+    background: rgba(132, 94, 194, 0.1);
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.docs-btn:hover {
+    background: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(132, 94, 194, 0.3);
+}
+
+.cta-btn i {
+    font-size: 0.8rem;
+}
+
+/* Responsive CTA Buttons */
+@media (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    .cta-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-buttons {
+        gap: 0.4rem;
+    }
+    
+    .cta-btn {
+        padding: 0.45rem 0.9rem;
+        font-size: 0.8rem;
+    }
+}
+
 /* Portfolio Modal */
 .portfolio-modal {
     position: fixed;
