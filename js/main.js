@@ -10,7 +10,7 @@ const portfolioItems = [
             "LLM-as-judge Eval"
         ],
         "isSpecialProject": true,
-        "chatUrl": "https://restaurantai-84r9ewew2yfesnbtdfhvxy.streamlit.app/",
+        "chatUrl": "https://graph-rag.mohsinalidharkhad.com/",
         "docsUrl": "https://www.notion.so/Restaurant-AI-Agent-AI-Powered-Dining-Assistant-239a4cca7b6f80dda724fa8bcd01e410?source=copy_link",
         "details": {
             "overview": "A sophisticated AI dining assistant built on Streamlit that leverages conversational AI to provide personalized restaurant recommendations and enhance the overall dining experience.",
