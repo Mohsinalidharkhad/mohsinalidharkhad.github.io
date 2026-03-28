@@ -200,6 +200,15 @@ const portfolioItems = [
 // Experience Timeline
 const experienceItems = [
     {
+        date: 'Sep 2025 - Present',
+        title: 'Principal Product Manager',
+        subtitle: 'AI Contract Management',
+        company: 'Sirion',
+        logo: './assets/images/companies/sirion-logo.png',
+        description: 'Building Agent-first CLM platform.',
+        tech: ['AI Platform', 'Domain Agents', 'Contract Lifecycle Management', 'SaaS']
+    },
+    {
         date: 'Sep 2024 - Apr 2025',
         title: 'Lead Product Manager',
         subtitle: 'AI Platform and Analytics',
